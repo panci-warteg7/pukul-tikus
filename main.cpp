@@ -60,4 +60,24 @@ int main() {
     string pesan = "Tekan angka 1-9 untuk memukul! (q = keluar)";
     int warnaPesan = 0;
     
+    while (sisaWaktu > 0 && nyawa > 0) {
+        int tombol = getch();    
+        if (tombol == 'q') break;
+        if (tikus == 0) {
+            jeda--;
+            if (jeda <= 0) {
+                tikus = rand() % 9 + 1;     
+                timerTikus = DURASI_TIKUS;
+            }
+        } else {
+            timerTikus--;
+            if (timerTikus <= 0) {          
+                nyawa--;
+                tikus = 0;
+                jeda = JEDA_TIKUS;
+                pesan = "Telat! Tikusnya kabur. Nyawa berkurang.";
+                warnaPesan = 3;
+            }
+        }
+    }
 }
