@@ -97,7 +97,7 @@ int main() {
         erase();
         mvprintw(1,5,"===WHACK-A-MOLE===");
         mvprintw(2,5, "skor:%d Nyawa:%d Waktu:%d", skor, nyawa, sisaWaktu/20);
-        gambarPapan(tikus);
+        gambarpapan(tikus);
 
         if(warnaPesan > 0)
          attron(COLOR_PAIR(warnaPesan));
