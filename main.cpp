@@ -109,4 +109,16 @@ int main() {
          sisaWaktu--;
          napms(50);
     }
+
+    nodelay(stdscr, FALSE);
+    erase();
+    mvprintw(5, 10, "===GAME OVER===");
+    mvprintw(7, 10,"Skor akhir kamu: %d", skor);
+    mvprintw(9, 10,"Tekan tombol apa saja untuk keluar...");
+    refresh();
+    getch();
+
+    endwin();
+    return 0;
+
 }
