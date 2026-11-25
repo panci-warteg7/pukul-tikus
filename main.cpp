@@ -79,5 +79,21 @@ int main() {
                 warnaPesan = 3;
             }
         }
+        if (tombol >= '1' && tombol <= '9') {
+            int pilihan = tombol - '0';
+            if (pilihan == tikus) {
+                skor += 10;
+                tikus = 0;
+                jeda = JEDA_TIKUS;
+                pesan = "Kena! +10 poin.";
+                warnaPesan = 2;
+            }else {
+                pesan = "Salah kotak!";
+                warnaPesan = 3;
+
+            }
+        }
+
+        
     }
 }
