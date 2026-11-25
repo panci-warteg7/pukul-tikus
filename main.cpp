@@ -94,6 +94,19 @@ int main() {
             }
         }
 
-        
+        erase();
+        mvprintw(1,5,"===WHACK-A-MOLE===");
+        mvprintw(2,5, "skor:%d Nyawa:%d Waktu:%d", skor, nyawa, sisaWaktu/20);
+        gambarPapan(tikus);
+
+        if(warnaPesan > 0)
+         attron(COLOR_PAIR(warnaPesan));
+        mvprintw(13,5,"%s", pesan.c_str());
+        if(warnaPesan > 0)
+         attroff(COLOR_PAIR(warnaPesan));
+         refresh();
+         
+         sisaWaktu--;
+         napms(50);
     }
 }
